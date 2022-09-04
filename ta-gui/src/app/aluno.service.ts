@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AlunoService {
   alunos: Aluno[] = [];
+  
   criar(aluno: Aluno): Aluno {
     aluno = aluno.clone();
     var result = null;
@@ -24,7 +25,15 @@ export class AlunoService {
       if (a.cpf == aluno.cpf) {
          a.metas = aluno.metas;
       }
+  } 
   }
+
+getAlunos(): Aluno[] {
+  var result: Aluno[] = [];
+  for (let a of this.alunos) {
+    result.push(a.clone());
+  }
+  return result;
 }
 
 }
