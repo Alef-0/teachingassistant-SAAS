@@ -7,7 +7,7 @@ import { AlunoService } from './aluno.service';
    templateUrl: './alunos.component.html',
    styleUrls: ['./alunos.component.css']
  })
- 
+
  export class AlunosComponent implements OnInit {
 
     aluno: Aluno = new Aluno();
