@@ -5,6 +5,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+#vscode
+*/.vscode/
+
 # Runtime data
 pids
 *.pid
@@ -57,3 +60,6 @@ typings/
 # dotenv environment variables file
 .env
 
+# testes
+/ta-gui/.vscode/
+/ta-gui/.vscode/launch.json
