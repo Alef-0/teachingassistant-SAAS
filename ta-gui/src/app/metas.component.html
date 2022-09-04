@@ -3,7 +3,6 @@
       <th>Nome</th>
       <th>CPF</th>
       <th>e-mail</th>
-      <th>login</th>
       <th>Requisitos</th>
       <th>Gerência de Configuração</th>
    </tr>
@@ -11,7 +10,6 @@
       <td>{{a.nome}}</td>
       <td>{{a.cpf}}</td>
       <td>{{a.email}}</td>
-      <td>{{a.login}}</td>
       <td class="meta"><input [(ngModel)]="a.metas['requisitos']" (change)="atualizarAluno(a)"></td>
       <td class="meta"><input [(ngModel)]="a.metas['gerDeConfiguracao']" (change)="atualizarAluno(a)"></td>
    </tr>
