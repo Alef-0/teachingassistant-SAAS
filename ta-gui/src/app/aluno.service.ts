@@ -21,6 +21,24 @@ export class AlunoService {
               ); 
   }
 
+  excluir(aluno: Aluno): Observable<Aluno> {
+    console.log("CHEGOU AQUI")
+    console.log(aluno)
+    
+    // Até aqui
+    return this.http.post<any>(this.taURL + "/excluir", JSON.stringify(aluno), {headers: this.headers})
+             .pipe( 
+                retry(2),
+                map( res => {if (res.success) {
+                  console.log(res); 
+                  return aluno;
+                } else {
+                  console.log("UE")
+                  return null;
+                }} )
+              ); 
+  }
+
   atualizar(aluno: Aluno): Observable<Aluno> {
     return this.http.put<any>(this.taURL + "/aluno",JSON.stringify(aluno), {headers: this.headers})          .pipe( 
                 retry(2),

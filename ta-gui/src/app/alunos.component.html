@@ -1,10 +1,10 @@
-<html (mousemove)="onMove()">
+<html (mouseout)="onClick()">
 
 <table>
 <tr>
    <td><label>Nome </label></td>
    <td><input [(ngModel)]="aluno.nome" name="namebox"></td>
-   <td><button (click)="criarAluno(aluno)">Adicionar</button></td>
+   <td><button class="criar" (click)="criarAluno(aluno)">Adicionar</button></td>
 </tr>
 <tr>
    <td><label>CPF </label></td>
@@ -35,6 +35,7 @@
    <td name="cpflist">{{a.cpf}}</td>
    <td>{{a.email}}</td>
    <td>{{a.login}}</td>
+   <td><button class="excluir" (click)="excluirAluno(a)">Remover</button></td>
 </tr>
 </table>
 

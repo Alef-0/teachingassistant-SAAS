@@ -16,7 +16,7 @@
     border-radius: 4px;
   }
   
-  button {
+  .criar {
     font-family: Arial;
     background-color: green;
     border: none;
@@ -25,7 +25,20 @@
     cursor: pointer;
     cursor: hand;
   }
-  button:hover {
+  .criar:hover{
+    background-color: #cfd8dc;
+  }
+
+  .excluir {
+    font-family: Arial;
+    background-color: rgb(173, 38, 38);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    cursor: hand;
+  }
+  .excluir:hover{
     background-color: #cfd8dc;
   }
   

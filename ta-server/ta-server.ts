@@ -23,12 +23,23 @@ app.get('/alunos', function (req: express.Request, res: express.Response) {
 })
 
 app.post('/aluno', function (req: express.Request, res: express.Response) {
+  console.log("Criou Aluno")
   var aluno: Aluno = <Aluno> req.body; //verificar se � mesmo Aluno!
   aluno = cadastro.cadastrar(aluno);
   if (aluno) {
     res.send({"success": "O aluno foi cadastrado com sucesso"});
   } else {
     res.send({"failure": "O aluno n�o pode ser cadastrado"});
+  }
+})
+
+app.post('/excluir', function (req: express.Request, res: express.Response) {
+var aluno : Aluno = <Aluno> req.body; //verificar se é mesmo Aluno!
+aluno = cadastro.excluir(aluno);
+  if (aluno) {
+    res.send({"success": "O aluno foi excluido com sucesso"});
+  } else {
+    res.send({"failure": "O aluno não pode ser excluido"});
   }
 })
 

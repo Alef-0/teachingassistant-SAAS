@@ -31,7 +31,21 @@ import { AlunoService } from './aluno.service';
               );
     } 
 
-    onMove(): void {
+    excluirAluno(a : Aluno):void{
+      this.alunoService.excluir(a)
+      .subscribe(
+        ar => {
+          if (ar) {
+            this.alunos = this.alunos.filter(function (value,index,array){
+              return value.cpf != a.cpf;
+            })
+          }
+        },
+        msg => { alert(msg.message); }
+      );
+    }
+
+    onClick(): void {
        this.cpfduplicado = false;
     }
 

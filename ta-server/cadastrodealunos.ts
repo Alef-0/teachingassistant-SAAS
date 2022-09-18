@@ -13,6 +13,15 @@ export class CadastroDeAlunos {
      return result;
    }
 
+   excluir(aluno:Aluno) : Aluno{
+    for(var i = 0; i<this.alunos.length; i++){
+      if (this.alunos[i] == aluno) 
+      this.alunos = this.alunos.slice(i);
+      return aluno;
+    }
+    return null;
+   }
+
     cpfNaoCadastrado(cpf: string): boolean {
       return !this.alunos.find(a => a.cpf == cpf);
    }
