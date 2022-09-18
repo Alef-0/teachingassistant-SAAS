@@ -1,6 +1,7 @@
 {
   "name": "testes-acceptance",
   "description": "Testes de aceitação do teaching assistant",
+  "license": "MIT",
   "scripts": {
     "tsc": "tsc",
     "test": "protractor typeScript/config/config.js",
